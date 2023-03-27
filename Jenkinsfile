@@ -13,6 +13,12 @@ pipeline {
         bat 'mvn clean install'
       }
     }
+
+    stage('Generate Dockerfile') {
+      steps {
+          sh 'mvn dockerfile:build'
+      }
+    }
     
     stage('Docker Build') {
       steps {
@@ -30,7 +36,7 @@ pipeline {
     
     stage('Docker Push') {
       steps {
-        bat 'docker push joshtkh/maven-web-app:${BUILD_NUMBER}'
+        bat 'docker push joshtkh/maven-web-app:1.1'
       }
     }
   }
