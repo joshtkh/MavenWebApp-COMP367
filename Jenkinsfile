@@ -16,7 +16,7 @@ pipeline {
 
     stage('Generate Dockerfile') {
       steps {
-          sh 'mvn dockerfile:build'
+          bat 'mvn dockerfile:build'
       }
     }
     
