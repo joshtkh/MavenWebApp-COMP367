@@ -13,12 +13,6 @@ pipeline {
         bat 'mvn clean install'
       }
     }
-
-    stage('Generate Dockerfile') {
-      steps {
-          bat 'mvn dockerfile:build'
-      }
-    }
     
     stage('Docker Build') {
       steps {
