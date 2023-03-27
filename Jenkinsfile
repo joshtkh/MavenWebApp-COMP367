@@ -16,7 +16,7 @@ pipeline {
     
     stage('Docker Build') {
       steps {
-        bat 'docker build -t joshtkh/MavenWebApp:${BUILD_NUMBER} .'
+        bat 'docker build -t joshtkh/maven-web-app:${BUILD_NUMBER} .'
       }
     }
     
