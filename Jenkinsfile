@@ -30,7 +30,7 @@ pipeline {
     
     stage('Docker Push') {
       steps {
-        bat 'docker push joshtkh/MavenWebApp:${BUILD_NUMBER}'
+        bat 'docker push joshtkh/maven-web-app:${BUILD_NUMBER}'
       }
     }
   }
